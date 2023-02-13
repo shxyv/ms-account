@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ms-account
+  cloud:
+    consul:
+      config:
+        fail-fast: true
+        enabled: true
+        format: yaml
+        prefixes: config/microservices-practice/${spring.application.name}
+        profile-separator: "-"
+      host: localhost
+      port: 8500
+
