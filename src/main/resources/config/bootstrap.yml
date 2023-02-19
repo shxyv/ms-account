@@ -9,6 +9,9 @@ spring:
         format: yaml
         prefixes: config/microservices-practice/${spring.application.name}
         profile-separator: "-"
+      discovery:
+        register: true
+        enabled: true
       host: localhost
       port: 8500
 
