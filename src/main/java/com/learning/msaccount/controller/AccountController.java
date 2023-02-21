@@ -1,5 +1,6 @@
 package com.learning.msaccount.controller;
 
+import com.learning.msaccount.client.model.Card;
 import com.learning.msaccount.dao.entity.Account;
 import com.learning.msaccount.service.AccountService;
 import java.util.List;
@@ -24,6 +25,11 @@ public class AccountController {
     @GetMapping
     public List<Account> getAllAccounts() {
         return accountService.getAllAccounts();
+    }
+
+    @GetMapping("/card/{id}")
+    public Card getCardById(@PathVariable Long id) {
+        return accountService.getCardById(id);
     }
 
 
