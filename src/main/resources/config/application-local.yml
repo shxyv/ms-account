@@ -45,4 +45,14 @@ resilience4j:
           units:
             - 2000
 
+  ratelimiter:
+    instances:
+      getCardByIdLimiter:
+        timeout-duration:
+          units:
+            - 5000
+        limit-refresh-period:
+          units:
+            - 5000
+        limit-for-period: 1
 
